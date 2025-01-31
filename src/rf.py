@@ -3,7 +3,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import f1_score, confusion_matrix
 from sklearn.inspection import permutation_importance
 from wbgt_metrics import f1_score_loose, f1_loose_scorer
-import numpy as np, csv, matplotlib.pyplot as plt, time, pickle
+import numpy as np, csv, matplotlib.pyplot as plt, time, pickle, joblib
 from sklearn.tree import plot_tree
 from dataset_prep import undersample, oversample 
 
@@ -74,8 +74,10 @@ print(clf.feature_importances_)
 
 # Save the model as a file
 pickle.dump(clf, open("rf.pkl", "wb"))
-# dTree = pickle.load(open("dt.pkl", "rb"))
+# clf = pickle.load(open("rf.pkl", "rb"))
 
+joblib.dump(clf, "rf.joblib", compress=3)
+# clf = joblib.load("rf.joblib")
 
 
 # iris = load_iris()

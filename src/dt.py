@@ -3,7 +3,7 @@ from sklearn.model_selection import train_test_split, StratifiedShuffleSplit, St
 from sklearn.metrics import f1_score, confusion_matrix
 from sklearn.inspection import permutation_importance
 from wbgt_metrics import f1_score_loose, f1_loose_scorer
-import numpy as np, sys, matplotlib.pyplot as plt, time, pickle
+import numpy as np, sys, matplotlib.pyplot as plt, time, pickle, joblib
 from dataset_prep import undersample, oversample 
 # import dtreeviz
 
@@ -69,6 +69,10 @@ print(pImportance["importances_mean"])
 # Save the model as a file
 pickle.dump(dTree, open("dt.pkl", "wb"))
 # dTree = pickle.load(open("dt.pkl", "rb"))
+
+joblib.dump(dTree, "dt.joblib", compress=3)
+# dTree = joblib.load("dt.joblib")
+
 
 # plot_tree(dTree,
 #           feature_names = featureNames,
