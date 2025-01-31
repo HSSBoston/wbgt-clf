@@ -1,4 +1,4 @@
-import streamlit as st, joblib
+import streamlit as st, pickle
 from sklearn.tree import DecisionTreeClassifier
 import pandas as pd
 
@@ -22,7 +22,8 @@ data = {
 df = pd.DataFrame(data)
 st.dataframe(df.set_index(df.columns[0]))
 
-clf = joblib.load("dt.joblib")
+clf = pickle.load(open("dt.pkl", "rb"))
+# clf = joblib.load("dt.joblib")
 # clf = joblib.load("dt.joblib")
 
 y_predicted = clf.predict([features])
