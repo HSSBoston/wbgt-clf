@@ -72,6 +72,10 @@ print(clf.feature_importances_)
 # pImportance = permutation_importance(clf, X, y, n_repeats=100, random_state=0)
 # print(pImportance["importances_mean"])
 
+# Save the model as a file
+pickle.dump(clf, open("rf.pkl", "wb"))
+# dTree = pickle.load(open("dt.pkl", "rb"))
+
 
 
 # iris = load_iris()

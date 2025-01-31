@@ -67,7 +67,7 @@ pImportance = permutation_importance(dTree, X, y, n_repeats=100, random_state=0)
 print(pImportance["importances_mean"])
 
 # Save the model as a file
-pickle.dump(model, open("dt.pkl", "wb"))
+pickle.dump(dTree, open("dt.pkl", "wb"))
 # dTree = pickle.load(open("dt.pkl", "rb"))
 
 # plot_tree(dTree,
