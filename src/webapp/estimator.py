@@ -1,5 +1,5 @@
 import streamlit as st, pickle
-from sklearn.tree import DecisionTreeClassifier
+# from sklearn.tree import DecisionTreeClassifier
 import pandas as pd
 
 # Hr, cloud cover, humidity, precip, temp, wind speed
