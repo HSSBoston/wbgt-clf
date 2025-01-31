@@ -2,7 +2,7 @@
 *.csv
 csv-files/
 *.pkl
-*.joblib
+ml/*.joblib
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
