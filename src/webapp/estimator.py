@@ -12,7 +12,7 @@ st.title("WBGT-based Heat Risk Estimator")
 st.subheader(f"Current weather conditions:")
 
 data = {
-    "Time": [features[0] + ":00"],
+#     "Time": [features[0] + ":00"],
     "Temp (F)": [features[4]],
     "Humidity (%)": [features[2]],
     "Cloud (%)": [features[1]],
@@ -20,7 +20,7 @@ data = {
     "Precip (inch in 6 hrs)": [features[3]],
     }
 df = pd.DataFrame(data)
-st.dataframe(df.set_index(df.columns[1]))
+# st.dataframe(df.set_index(df.columns[0]))
 
 # clf = pickle.load(open("src/webapp/dt.pkl", "rb"))
 clf = joblib.load("src/webapp/dt.joblib")
