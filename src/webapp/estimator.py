@@ -20,8 +20,8 @@ data = {
     "Precip (inch in 6 hrs)": [features[3]],
     }
 df = pd.DataFrame(data)
-st.dataframe(df)
-# st.dataframe(df.set_index(df.columns[0]))
+# st.dataframe(df)
+st.dataframe(df.set_index(df.columns[0]))
 
 # clf = pickle.load(open("src/webapp/dt.pkl", "rb"))
 clf = joblib.load("src/webapp/dt.joblib")
