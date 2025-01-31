@@ -22,7 +22,7 @@ data = {
 df = pd.DataFrame(data)
 st.dataframe(df.set_index(df.columns[0]))
 
-clf = pickle.load(open("./src/webapp/dt.pkl", "rb"))
+clf = pickle.load(open("src/webapp/dt.pkl", "rb"))
 # clf = joblib.load("dt.joblib")
 # clf = joblib.load("dt.joblib")
 
