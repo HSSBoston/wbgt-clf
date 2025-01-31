@@ -1,5 +1,5 @@
-import streamlit as st, pickle
-# from sklearn.tree import DecisionTreeClassifier
+import streamlit as st, joblib
+from sklearn.tree import DecisionTreeClassifier
 import pandas as pd
 
 # Hr, cloud cover, humidity, precip, temp, wind speed
@@ -13,18 +13,17 @@ st.subheader(f"Current weather conditions:")
 
 data = {
     "Time": [features[0] + ":00"],
-    "Temperature (F)": [features[4]],
+    "Temp (F)": [features[4]],
     "Humidity (%)": [features[2]],
-    "Cloud cover (%)": [features[1]],
-    "Wind speed (MPH)": [features[5]],
+    "Cloud (%)": [features[1]],
+    "Wind (MPH)": [features[5]],
     "Precip (inch in 6 hrs)": [features[3]],
     }
 df = pd.DataFrame(data)
 st.dataframe(df.set_index(df.columns[0]))
 
-clf = pickle.load(open("src/webapp/dt.pkl", "rb"))
-# clf = joblib.load("dt.joblib")
-# clf = joblib.load("dt.joblib")
+# clf = pickle.load(open("src/webapp/dt.pkl", "rb"))
+clf = joblib.load("src/webapp/dt.joblib")
 
 y_predicted = clf.predict([features])
 alertLevel = int(y_predicted[0])
