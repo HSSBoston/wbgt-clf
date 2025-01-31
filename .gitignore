@@ -1,7 +1,7 @@
 .DS_Store
 *.csv
 csv-files/
-*.pkl
+ml/*.pkl
 ml/*.joblib
 
 # Byte-compiled / optimized / DLL files
