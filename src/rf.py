@@ -3,7 +3,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import f1_score, confusion_matrix
 from sklearn.inspection import permutation_importance
 from wbgt_metrics import f1_score_loose, f1_loose_scorer
-import numpy as np, csv, matplotlib.pyplot as plt, time
+import numpy as np, csv, matplotlib.pyplot as plt, time, pickle
 from sklearn.tree import plot_tree
 from dataset_prep import undersample, oversample 
 
