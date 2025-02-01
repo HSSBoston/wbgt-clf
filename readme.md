@@ -14,7 +14,7 @@ This project uses decision tree and random forest algorithms for classification.
 
 The proposed classifiers are trained and evaluated with a dataset from the National Oceanic and Atmospheric Administration. After performing dataset preprocessing and hyperparameter tuning, the decision tree accuracy is 91% and the random forest accuracy is 99%. They are efficient and lightweight enough to be deployed in webapps. Currently, a simple proof-of-concept webapp is running at [https://wbgt-estimator.streamlit.app](https://wbgt-estimator.streamlit.app/), which takes the current weather conditions and estimates the safety alert level.  
 
-Future work includes enhancing the propsed classifiers with extra datasets and carrying out field tests in the summer. Webapp improvement and smartphone app development are also planned. 
+Future work includes enhancing the proposed classifiers with extra datasets and carrying out field tests in the summer. Webapp improvement and smartphone app development are also planned. 
 
 This project was submitted to the [Hack for Humanity 2025](https://hack-for-humanity-25.devpost.com/). 
 
