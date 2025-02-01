@@ -2,21 +2,19 @@
 ## WBGT-based Heat Risk Estimation for Outdoor Athletes: A Machine Learning Approach
 -->
 
-<!--
-This project builds a portable device that finds and displays the local Web Bulb Globe Temperature (WBGT). WBGT is an indicator of heat stress on the human body in direct sunlight. It measures air temperature, humidity, wind speed and solar heat (including sunlight angle and cloud cover). This device allows outdoor athletes to be aware of the environmental conditions for their activities and helps them take precautions early enough (e.g. resting in shade and getting hydrated).
-
-This device is implemented with a Raspberry Pi computer and an e-paper display. A Python program runs on Raspberry Pi to determine the current location of the device (latitude and longitude) through IP geolocation, download WBGT forecast for that location from National Oceanic and Atmospheric Administration (NOAA) and show the forecast on the e-paper display. The program can be activated via iOS Siri.
--->
-
 <p align="center">
   <img src="images/logo.jpg" width="750" />
 </p>
 
+It has been very hot in recent years. The year 2024 was the hottest year in history, and this year is expected to be pretty hot again. These high temperatures bring risk for heat-related illnesses, which can cause death if not taken seriously. Unfortunately, ER and death rates have been increasing due to this illness. In the US, 77 athletes have died since 2000, and 65 of them were teenagers. This is a major humanity issue worldwide, not only in the US, because these deaths are avoidable with the right precautions. 
 
-## Project Summary
+The goals of this project are to help athletes and coaches to be aware of the heat risk of their activity and help them take precautions early. To meet these goals I propose a method to estimate safety alert level with common meteorological parameters. It uses machine learning (ML) to classify a set of meteorological parameters to an alert level.
 
+This project uses decision tree and random forest algorithms for classification. The classifiers use air temperature, humidity, cloud cover, precipitation and local time as inputs. The classification output is a safety alert level. Four different alert levels are adopted from a standard heat safety policy that is endorsed by the National Federation of State High School Associations.
 
+The proposed classifiers are trained and evaluated with a dataset collected from the National Oceanic and Atmospheric Administration. After performing dataset preprocessing and hyperparameter tuning, the decision tree accuracy is 91% and the random forest accuracy is 99%. They are efficient and lightweight enough to be deployed in webapps. Currently, a simple proof-of-concept webapp is running at [https://wbgt-estimator.streamlit.app](https://wbgt-estimator.streamlit.app/), which takes the current weather conditions and estimates the safety alert level.  
 
+Future work includes enhancing the propsed classifiers with extra datasets and carrying out field tests in the summer. Webapp improvement and smartphone app development are also planned. 
 
-
+This project was submitted to the [Hack for Humanity 2025](https://hack-for-humanity-25.devpost.com/). 
 
