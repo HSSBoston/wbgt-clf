@@ -74,18 +74,3 @@ joblib.dump(dTree, "dt.joblib", compress=3)
 # dTree = joblib.load("dt.joblib")
 
 
-# plot_tree(dTree,
-#           feature_names = featureNames,
-#           class_names = ["0", "1", "2", "3"],
-#           fontsize=10,
-#           filled=True)
-# plt.show()
-
-
-# # viz_model = dtreeviz.model(clf,
-# #                X_train=X_train,
-# #                y_train=y_train,
-# #                target_name='Class',
-# #                feature_names=iris.feature_names,
-# #                class_names=iris.target_names)
-# # viz_model.view(scale=0.8)
