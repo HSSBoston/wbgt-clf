@@ -1,11 +1,10 @@
-from sklearn.tree import DecisionTreeClassifier, plot_tree
+from sklearn.tree import DecisionTreeClassifier
 from sklearn.model_selection import train_test_split, StratifiedShuffleSplit, StratifiedKFold, cross_val_score
 from sklearn.metrics import f1_score, confusion_matrix
 from sklearn.inspection import permutation_importance
 from wbgt_metrics import f1_score_loose, f1_loose_scorer
-import numpy as np, sys, matplotlib.pyplot as plt, time, pickle, joblib
+import numpy as np, matplotlib.pyplot as plt, time, pickle, joblib
 from dataset_prep import undersample, oversample 
-# import dtreeviz
 
 rawDatasetFileName = "dataset.csv"
 X, y, featureNames = undersample(rawDatasetFileName)
